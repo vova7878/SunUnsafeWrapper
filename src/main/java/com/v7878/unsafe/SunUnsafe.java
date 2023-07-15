@@ -28,7 +28,7 @@ import sun.misc.Unsafe;
 
 //sun.misc.Unsafe "as is", but static
 @SuppressWarnings("DiscouragedPrivateApi")
-public class SunUnsafe {
+public final class SunUnsafe {
 
     private static final Unsafe unsafe;
 

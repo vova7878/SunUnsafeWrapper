@@ -20,14 +20,14 @@
  * SOFTWARE.
  */
 
-package com.v7878.unsafe;
+package com.v7878.sun.unsafe;
 
 import java.lang.reflect.Field;
 
 import sun.misc.Unsafe;
 
 //sun.misc.Unsafe "as is", but static
-@SuppressWarnings("DiscouragedPrivateApi")
+@SuppressWarnings({"DiscouragedPrivateApi", "deprecation"})
 public final class SunUnsafe {
 
     private static final Unsafe unsafe;

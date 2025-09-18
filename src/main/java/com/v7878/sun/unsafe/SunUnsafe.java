@@ -322,41 +322,6 @@ public final class SunUnsafe {
     }
 
     @AlwaysInline
-    public static void copyMemoryToPrimitiveArray(long srcAddr, Object dst, long dstOffset, long bytes) {
-        INSTANCE.copyMemoryToPrimitiveArray(srcAddr, dst, dstOffset, bytes);
-    }
-
-    @AlwaysInline
-    public static void copyMemoryFromPrimitiveArray(Object src, long srcOffset, long dstAddr, long bytes) {
-        INSTANCE.copyMemoryFromPrimitiveArray(src, srcOffset, dstAddr, bytes);
-    }
-
-    @AlwaysInline
-    public static int getAndAddInt(Object obj, long offset, int delta) {
-        return INSTANCE.getAndAddInt(obj, offset, delta);
-    }
-
-    @AlwaysInline
-    public static long getAndAddLong(Object obj, long offset, long delta) {
-        return INSTANCE.getAndAddLong(obj, offset, delta);
-    }
-
-    @AlwaysInline
-    public static int getAndSetInt(Object obj, long offset, int newValue) {
-        return INSTANCE.getAndSetInt(obj, offset, newValue);
-    }
-
-    @AlwaysInline
-    public static long getAndSetLong(Object obj, long offset, long newValue) {
-        return INSTANCE.getAndSetLong(obj, offset, newValue);
-    }
-
-    @AlwaysInline
-    public static Object getAndSetObject(Object obj, long offset, Object newValue) {
-        return INSTANCE.getAndSetObject(obj, offset, newValue);
-    }
-
-    @AlwaysInline
     public static void loadFence() {
         INSTANCE.loadFence();
     }

@@ -106,23 +106,7 @@ public abstract class Unsafe {
 
     public abstract void putDouble(long address, double x);
 
-    public abstract void copyMemoryToPrimitiveArray(long srcAddr, Object dst,
-                                                    long dstOffset, long bytes);
-
-    public abstract void copyMemoryFromPrimitiveArray(Object src, long srcOffset,
-                                                      long dstAddr, long bytes);
-
     public abstract void copyMemory(long srcAddr, long dstAddr, long bytes);
-
-    public abstract int getAndAddInt(Object obj, long offset, int delta);
-
-    public abstract long getAndAddLong(Object obj, long offset, long delta);
-
-    public abstract int getAndSetInt(Object obj, long offset, int newValue);
-
-    public abstract long getAndSetLong(Object obj, long offset, long newValue);
-
-    public abstract Object getAndSetObject(Object obj, long offset, Object newValue);
 
     public abstract void loadFence();
 

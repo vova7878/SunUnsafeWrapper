@@ -1,5 +1,6 @@
 [versions]
 agp = "8.13.0"
+maven-publish = "0.34.0"
 r8-annotations = "v1.0.0"
 
 [libraries]
@@ -7,4 +8,4 @@ r8_annotations = { module = "io.github.vova7878:R8Annotations", version.ref = "r
 
 [plugins]
 android-library = { id = "com.android.library", version.ref = "agp" }
-maven-publish = { id = 'maven-publish' }
+maven-publish = { id = "com.vanniktech.maven.publish", version.ref = "maven-publish" }

@@ -1,0 +1,16 @@
+.version 52
+.class final com/v7878/sun/unsafe/Getter
+.super java/lang/Object
+.auto frames
+
+# https://android.googlesource.com/platform/art/+/refs/heads/android16-release/runtime/verifier/method_verifier.cc#3668
+# This trick is based on the fact that Android allows you to call a constructor of any superclass on an object
+.method public static newUnsafe()Lsun/misc/Unsafe;
+    .annotation build Lcom/v7878/r8/annotations/AlwaysInline;
+    .end annotation
+
+    new sun/misc/Unsafe
+    dup
+    invokespecial java/lang/Object <init> ()V
+    areturn
+.end method

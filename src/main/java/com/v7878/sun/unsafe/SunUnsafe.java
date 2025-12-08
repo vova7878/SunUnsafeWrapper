@@ -24,24 +24,11 @@ package com.v7878.sun.unsafe;
 
 import com.v7878.r8.annotations.AlwaysInline;
 
-import java.lang.reflect.Field;
-
 import sun.misc.Unsafe;
 
 // sun.misc.Unsafe "as is"
-@SuppressWarnings({"JavaReflectionMemberAccess", "DiscouragedPrivateApi"})
 public final class SunUnsafe {
-    public static final Unsafe INSTANCE;
-
-    static {
-        try {
-            Field field = Unsafe.class.getDeclaredField("theUnsafe");
-            field.setAccessible(true);
-            INSTANCE = (Unsafe) field.get(null);
-        } catch (NoSuchFieldException | IllegalAccessException e) {
-            throw new RuntimeException(e);
-        }
-    }
+    public static final Unsafe INSTANCE = Getter.newUnsafe();
 
     @AlwaysInline
     public static Class<?> getUnsafeClass() {

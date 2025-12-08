@@ -3,6 +3,7 @@ import com.vanniktech.maven.publish.AndroidMultiVariantLibrary
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.maven.publish)
+    alias(libs.plugins.raung)
 }
 
 java {
@@ -11,7 +12,9 @@ java {
 
 android {
     namespace = "com.v7878.sun.unsafe"
-    compileSdk = 36
+    compileSdk {
+        version = release(36)
+    }
 
     defaultConfig {
         minSdk = 26
